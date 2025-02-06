@@ -5,6 +5,7 @@
 /Backend/.vscode/
 /Backend/.gitignore
 /Backend/HELP.md
+/Backend/src/main/resources/application.properties
 
 #MAven build
 /Backend/target/
