@@ -1,0 +1,22 @@
+.vscode/
+
+#Backend
+/Backend/.idea/
+/Backend/.vscode/
+/Backend/.gitignore
+/Backend/HELP.md
+
+#MAven build
+/Backend/target/
+
+#Maven wrapper files
+/Backend/.mvn/
+/Backend/mvnw
+/Backend/mvnw.cmd
+
+#FrontEnd
+
+/FrontEnd/node_modules/
+/FrontEnd/.gitignore
+/FrontEnd/README.md
+
