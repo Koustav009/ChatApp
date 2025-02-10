@@ -50,7 +50,6 @@ const ChatPage = () =>
         const messages = await getMessagess(roomId);
         console.log(roomId);
         setMessages(messages);
-        console.log(messages);
       } catch (error) {}
     }
     if (connected) {
@@ -80,20 +79,24 @@ const ChatPage = () =>
 
       client.connect({}, () => {
         setStompClient(client);
-
         toast.success("connected");
 
-        client.subscribe(`/topic/room/${roomId}`, (message) => {
-          console.log("Received message:", message.body);
-
+        // this method is called everytime when messgage sent and recived in websocket
+        client.subscribe
+        (`/topic/room/${roomId}`, (message) => 
+          {
+          console.log("Received message:",typeof message.body);
+          toast.success("sent/recived");
           const newMessage = JSON.parse(message.body);
+          // console.log("Parsed message:",typeof newMessage.body.timestamp);
 
-          console.log("Parsed message:", newMessage.body.roomId);
-
-          setMessages((prev) => [...prev, newMessage.body]);
+          setMessages((prev) => [...prev, newMessage]);
 
           //rest of the work after success receiving the message
-        });
+          }
+        );
+
+
       });
     };
 
@@ -117,13 +120,15 @@ const ChatPage = () =>
       };
 
       
-
+      //Sending the message to 
       stompClient.send(
         `/app/sendmessage/${roomId}`,
         {},
         JSON.stringify(message)
+        
       );
 
+      console.log("The request = ",message);
       // setMessages([...messages, message]);
 
       setInput("");
@@ -195,7 +200,7 @@ const ChatPage = () =>
                   <p className="text-sm font-bold">{message.sender}</p>
                   <p>{message.content}</p>
                   {<p className="text-xs text-gray-400">
-                    {timeAgo(message.timeStamp)}
+                    <span>{(message.timestamp).slice(11,19)}</span>
                   </p>}
                 </div>
               </div>

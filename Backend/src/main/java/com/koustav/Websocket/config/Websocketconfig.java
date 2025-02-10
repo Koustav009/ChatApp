@@ -18,6 +18,7 @@ public class Websocketconfig implements WebSocketMessageBrokerConfigurer {
         //The client will connect on this endpoint for establishing websocket connection
         // Using sockjs the requests will go to - https://localhost:8080/chat  
         .setAllowedOriginPatterns("*")
+        
         .withSockJS();
     }
 
