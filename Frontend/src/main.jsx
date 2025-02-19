@@ -1,8 +1,8 @@
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter } from "react-router";
-import AppRoutes from "./config/routes.jsx";
+import AppRoutes from "./config/Routes.jsx";
 import { Toaster } from "react-hot-toast";
 import { ChatProvider } from "./context/ChatContext.jsx";
 
