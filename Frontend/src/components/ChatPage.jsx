@@ -7,7 +7,7 @@ import { Stomp } from "@stomp/stompjs";
 import toast from "react-hot-toast";
 import { baseURL } from "../config/AxiosHelper";
 import { getMessagess } from "../services/RoomService";
-import { timeAgo } from "../config/helper";
+// import { timeAgo } from "../config/helper";
 
 
 const ChatPage = () => 
@@ -37,7 +37,7 @@ const ChatPage = () =>
 
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const inputRef = useRef(null);
+  // const inputRef = useRef(null);
   const chatBoxRef = useRef(null);
   const [stompClient, setStompClient] = useState(null);
 
@@ -50,7 +50,8 @@ const ChatPage = () =>
         const messages = await getMessagess(roomId);
         console.log(roomId);
         setMessages(messages);
-      } catch (error) {}
+      } catch (error) {console.log(error);
+      }
     }
     if (connected) {
       loadMessages(roomId);
