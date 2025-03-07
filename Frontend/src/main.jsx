@@ -6,6 +6,10 @@ import AppRoutes from "./config/Routes.jsx";
 import { Toaster } from "react-hot-toast";
 import { ChatProvider } from "./context/ChatContext.jsx";
 
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
+
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Toaster position="top-center" />
