@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 
+// import com.koustav.Websocket.config.AppConstant;
 import com.koustav.Websocket.model.Message;
 import com.koustav.Websocket.payload.MessageRequest;
 import com.koustav.Websocket.services.service;
@@ -19,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
-@CrossOrigin("*")
+@CrossOrigin("")
 public class ChatController {
 
     private final service serv;

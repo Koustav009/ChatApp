@@ -20,3 +20,4 @@
 /FrontEnd/node_modules/
 /FrontEnd/.gitignore
 /FrontEnd/README.md
+Backend/deploy.sh
