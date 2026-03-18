@@ -6,8 +6,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @RequiredArgsConstructor
-public class SignUpRequest {
-
+public class SignupRequest {
     private String name;
     private String number;
     private String gender;
