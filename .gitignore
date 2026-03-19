@@ -1,22 +1,17 @@
 .vscode/
 
 #Backend
-/Backend/.idea/
-/Backend/.vscode/
-/Backend/.gitignore
-/Backend/HELP.md
-/Backend/src/main/resources/application.properties
+.idea/
+.vscode/
+.gitignore
+HELP.md
+src/main/resources/application.properties
 
 #MAven build
-/Backend/target/
+target/
 
 #Maven wrapper files
-/Backend/.mvn/
-/Backend/mvnw
-/Backend/mvnw.cmd
+.mvn/
+mvnw
+mvnw.cmd
 
-#FrontEnd
-
-/Frontend/node_modules/
-/Frontend/.gitignore
-/Frontend/README.md
